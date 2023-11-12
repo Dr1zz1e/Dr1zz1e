@@ -1,6 +1,6 @@
-### Bonjour 👋
+## Bonjour 👋
 
-## Description
+### Description
 
 My name is **Dr1zz1e**, 
 
