@@ -7,15 +7,15 @@
 
 # Область тестирования
 
-| IP/домен     | Порт | Сервис      |     |
-| ------------ | ---- | ----------- | --- |
-| 51.250.76.33 | 8080 | .hackforums |     |
+| IP/домен     | Порт | Сервис      |
+| ------------ | ---- | ----------- |
+| 51.250.76.33 | 8080 | .hackforums |
 
 # Найденные уязвимости
 
-!Brutforce
-!Substitution of credentials
-!Path traversal
+- Brutforce
+- Substitution of credentials
+- Path traversal
 ## Issue tracking system
 ### Оценка 
 
