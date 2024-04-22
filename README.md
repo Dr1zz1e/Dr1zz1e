@@ -13,21 +13,31 @@
 
 # Найденные уязвимости
 
-- Brutforce
-- Substitution of credentials
 - Path traversal
-## Issue tracking system
+- Substitution of credentials
+- brutforce
+
 ### Оценка 
 
+- path traversal = Базовая оценка (BS): 7.8
+- Substitution of credentials = Базовая оценка (BS): 9
+- Brutforce = Базовая оценка (BS): 9
+
 ### Описание
-> Web applications commonly use server side templating technologies (Jinja2, Twig, FreeMaker, etc.) to generate dynamic HTML responses. Server Side Template Injection vulnerabilities (SSTI) occur when user input is embedded in a template in an unsafe manner and results in remote code execution on the server. Any features that support advanced user-supplied markup may be vulnerable to SSTI including wiki-pages, reviews, marketing applications, CMS systems etc. Some template engines employ various mechanisms (eg. sandbox, whitelisting, etc.) to protect against SSTI.
+> Веб сайты могут предоставлять доступ к файлам/ресурсам посредством аутендификации пользователя или просто в открытом доступе. Аккаунт пользователя также является важной собственностью пользователя и доступ к нему должен быть ограничен для всех посторонних
 
 ### POC (Proof of Concept)
-```shell
-''.__class__.__base__.__subclasses__()[351]('whoami', shell=True, stdout=-1).communicate()
+-```shell
+../../../../../etc/hosts
 ```
-![[Pasted image 20240326173049.png]]
+
+-Злоумышленник может получить аккаунт путем создания другого аккаунта с одинаковым Username`ом
+
+-Злоумышленник может получить доступ к аккаунту администратора путем подбора пароля из списка самых популярных (Brutforce) 
+
 ### Рекомендации по устранению
-* 
+-Добавить обработку запросов с использованием ../
+-Добавить проверку на существование аккаунта со схожим username`ом
+-Поменять пароль на более сложный, добавить капчу.
 
 
